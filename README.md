@@ -1,3 +1,7 @@
 # AEM-FIX
 
-- Documentação com todos os códigos das páginas desenvolvidas em AEM. Esse repo é para organizar todos os Design Systems feitos em HTML5, CSS3 e Vanilla JS, feitos para tentar corrigir erros e usar recursos modernos no AEM Legado - Adobe Experience Manager, Version 6.4.8.4 
+This repo is focused on a temporary/auxiliary Design System for AEM pages. This Design System's is used to fix errors and add modern HTML, CSS3, and JS features to a legacy Adobe Experience Manager, Version 6.4.8.4.
+
+
+## Reports
+- aemper-v1-mini.html (descontinuado)
