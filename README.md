@@ -6,5 +6,5 @@ This repo is focused on a temporary/auxiliary Design System for AEM pages. This 
 biosystem.html v0.9
 
 ### Reports
-- aemper-v1-mini.html (descontinuado)
+- aemper-v1-mini.html (deprecated)
 
