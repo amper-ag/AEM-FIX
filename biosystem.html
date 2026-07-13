@@ -3,59 +3,97 @@
 [ BIOSYSTEM / AEM DESIGN SYSTEM ]
 
 > module: biosystem.html 
-> version: 0.9
+> version: 1.0
 
 ------------------------------------------------------->
 
 <!-- thermofisher header hack -------------------------------------------------------->
 <style>
-    .thermofisher-header{ height: 80px; }
+    .thermofisher-header {
+        height: 10px;
+    }
+
     @media (orientation: portrait) {
-        .thermofisher-header{ height: 40px; }
+        .thermofisher-header {
+            height: 10px;
+        }
     }
 </style>
 <div class="thermofisher-header"></div>
 
 <style type="text/css">
-    .image-desktop{ display: block; }
-    .image-mobile{ display: none; }
+    body{
+        font-size: 16px !important;
+    }
+
+    /* mobile images  ------------------------------------------------------ */
+    .image-desktop {
+        display: block;
+    }
+
+    .image-mobile {
+        display: none;
+    }
 
     @media (orientation: portrait) {
-        .image-desktop{ display: none; }
-        .image-mobile{ display: block; }
+        .image-desktop {
+            display: none;
+        }
+
+        .image-mobile {
+            display: block;
+        }
     }
 
     /* grids  ------------------------------------------------------ */
-    .align{
+    .align {
         width: 100%;
         height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .align-vertical {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: baseline;
     }
-    .align-vertical-center{
+
+    .align-vertical-center {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .align-center { text-align: center; }
-    .grid { display: flex; column-gap: 15px }
-    .grid div { width: 100%; }
-    .grid div img { display: block; }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .grid {
+        display: flex;
+        column-gap: 15px
+    }
+
+    .grid div {
+        width: 100%;
+    }
+
+    .grid div img {
+        display: block;
+    }
 
     @media (orientation: portrait) {
-        .grid { display: block; column-gap: 15px; }
+        .grid {
+            display: block;
+            column-gap: 15px;
+        }
     }
 
     /* buttons ------------------------------------------------------ */
-    .gen-button-red{
+    .gen-button-red {
         transition: all 0.5s ease-in-out;
         display: inline-block;
         cursor: pointer;
@@ -73,11 +111,13 @@
         background-color: #e71316;
         color: white !important;
     }
-    .gen-button-red:hover{
+
+    .gen-button-red:hover {
         background-color: #eee;
         color: #e71316;
     }
-    .gen-button-mini-red{
+
+    .gen-button-mini-red {
         transition: all 0.5s ease-in-out;
         display: inline-block;
         cursor: pointer;
@@ -95,12 +135,13 @@
         background-color: #e71316;
         color: white !important;
     }
-    .gen-button-mini-red:hover{
+
+    .gen-button-mini-red:hover {
         background-color: #eee;
         color: #e71316;
     }
 
-    .gen-button-white{
+    .gen-button-white {
         transition: all 0.5s ease-in-out;
         display: inline-block;
         cursor: pointer;
@@ -118,63 +159,103 @@
         background-color: #ffffff;
         color: #1e8ae7 !important;
     }
-    .gen-button-white:hover{
+
+    .gen-button-white:hover {
         background-color: #eee;
         color: #e71316;
     }
 
-    @media (orientation: portrait) {
-
-    }
+    @media (orientation: portrait) {}
 
     /* lines ------------------------------------------------------ */
-    .gen-line-1{
+    .gen-line-1 {
         width: 100%;
         height: 2px;
         background-color: #eaeaea
     }
 
     .gen-line-right {
-        position: relative; 
+        position: relative;
     }
+
     .gen-line-right::after {
         content: "";
         position: absolute;
         right: 0;
-        top: 25%;              
+        top: 25%;
         width: 1px;
         height: 50%;
         background-color: #ccc;
     }
 
     /* borders ------------------------------------------------------ */
-    .gen-border-grey{
+    .gen-border-grey {
         border: 1px solid #ddd;
     }
 
     /* titles ------------------------------------------------------ */
-    .gen-title-red{
+    .gen-title-red {
         color: #e71316;
     }
 
     /* links ------------------------------------------------------ */
-    .gen-link{
+    .gen-link {
         color: #0b9bff;
         text-decoration: underline !important;
         transition: all .5s ease-out;
     }
-    .gen-link:hover{
+
+    .gen-link:hover {
         color: darkgrey;
         text-decoration: none;
     }
 
+    /* toggle ------------------------------------------------------ */
+    .gen-toggle-content {
+        display: none;
+        animation: fadeIn 0.4s ease;
+    }
+
+    .gen-toggle-arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        font-size: 0.8em;
+    }
+
+    .gen-toggle.active .gen-toggle-arrow {
+        transform: rotate(-180deg);
+    }
+
+    .gen-toggle-content.show {
+        display: block;
+    }
+
+    /* motion  ------------------------------------------------------ */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     /* normalize ------------------------------------------------------ */
-    ul{
+    ul {
         margin-block-start: 0;
         margin-block-end: 0;
         padding-inline-start: 0;
     }
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-block-start: 0;
         margin-block-end: 0;
         margin-inline-start: 0;
@@ -183,12 +264,13 @@
     }
 
     /* fix aem errors ------------------------------------------------------ */
-    .form_leftcol{
+    .form_leftcol {
         display: flex;
         padding-top: 10px;
     }
 
-    .radio, .checkbox{
+    .radio,
+    .checkbox {
         padding-left: 0;
         font-size: 12px;
     }
