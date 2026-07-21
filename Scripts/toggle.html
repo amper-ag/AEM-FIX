@@ -1,0 +1,74 @@
+<style>
+    /* These CSS styles are incorporated in biosystem v1.1 */
+    .gen-toggle {
+        cursor: pointer;
+        transition: all .5s ease-out;
+    }
+
+    .gen-toggle:hover {
+        color: #e71316
+    }
+
+    .gen-toggle-content {
+        display: none;
+        animation: fadeIn 0.4s ease;
+    }
+
+    .gen-toggle-arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        font-size: 0.8em;
+    }
+
+    .gen-toggle.active .gen-toggle-arrow {
+        transform: rotate(-180deg);
+    }
+
+    .gen-toggle-content.show {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .example-content {
+        height: 400px;
+        background-color: greenyellow;
+    }
+
+    @media (orientation: portrait) {}
+
+    /* ------------------------------------------------------ */
+</style>
+
+<section>
+    <a class="gen-toggle">
+        <h3><span class="gen-toggle-arrow">▼</span> Ver produtos disponíveis</h3>
+    </a>
+
+    <div class="gen-toggle-content">
+        <div class="example-content"></div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const trigger = document.querySelector('.gen-toggle');
+        const content = document.querySelector('.gen-toggle-content');
+
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            content.classList.toggle('show');
+            trigger.classList.toggle('active');
+        });
+    });
+</script>
