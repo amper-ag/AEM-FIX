@@ -1,0 +1,189 @@
+<!------------------------------------------------------
+[ BIO-SYSTEM / DESIGN SYSTEM ]
+> module: ui-css full
+> version: 0.5
+------------------------------------------------------->
+
+<style type="text/css">
+    :root {
+        /* main colors */
+        --black: #000;
+        --white: #ffffff;
+        --grey: #54585a;
+        --red: #e71316;
+        --blue: #262262;
+        --lightblue: #1e8ae7;
+        --lightgrey: #ccc;
+
+        /* complementary colors */
+        --light: #f3f3f3;
+        --dark: #2a2a2a;
+
+        /* spaces */
+        --space1: 15px;
+        --space2: 30px;
+        --space3: 45px;
+        --space4: 60px;
+        --space5: 75px;
+        --space6: 90px;
+    }
+
+    body {
+        font-family: HelveticaNeueLight, Helvetica, Roboto, "Segoe UI", Arial, sans-serif;
+        color: #222 !important;
+        margin: 0;
+        overflow-x: hidden !important;
+        font-size: 16px !important;
+    }
+    .underline { text-decoration: underline !important; }
+
+    /* shortcuts ------------------------------------------------------ */
+    .color-white{ color: var(--white) !important; }
+    .color-grey{  color: var(--grey) !important; }
+    .color-red{   color: var(--red) !important; }
+    .color-blue{  color: var(--blue) !important; }
+
+    .align-vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .align-center { text-align: center; }
+    .grid { display: flex; column-gap: var(--space1); }
+    .grid div { width: 100%; }
+    .grid div img { width: 100%; }
+
+    @media (orientation: portrait) {
+        .grid { display: block; column-gap: var(--space1); }
+    }
+
+    /* buttons ------------------------------------------------------ */
+    .gen-button{
+        transition: all 0.5s ease-in-out;
+        display: inline-block;
+        cursor: pointer;
+        width: auto;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 1em;
+        font-weight: 600;
+        padding-top: var(--space1);
+        padding-bottom: var(--space1);
+        padding-left: var(--space1);
+        padding-right: var(--space1);
+        border: 0;
+        background-color: var(--red);
+        color: var(--white) !important;
+        border-radius: 10px;
+    }
+    .gen-button:hover{
+        background-color: var(--blue);
+        color: var(--grey);
+    }
+
+    .gen-button-super {
+        transition: all 0.5s ease-in-out;
+        display: inline-block;
+        cursor: pointer;
+        width: auto;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 1em;
+        font-weight: 600;
+        padding-top: var(--space1);
+        padding-bottom: var(--space1);
+        padding-left: 10%;
+        padding-right: 10%;
+        border: 0;
+        background-color: var(--red);
+        color: var(--white) !important;
+        border-radius: 10px;
+    }
+    .gen-button-super:hover{
+        background-color: var(--blue);
+        color: var(--grey);
+    }
+
+    @media (orientation: portrait) {
+
+    }
+
+    /* links ------------------------------------------------------ */
+    .gen-link-1{
+        color: var(--lightblue);
+        text-decoration: underline !important;
+        transition: all .5s ease-out;
+        line-height: 1;
+    }
+    .gen-link-1:hover{
+        color: var(--grey);
+        text-decoration: none;
+    }
+
+    /* slideshow ------------------------------------------------------ */ 
+    .gen-slides {
+        position: relative;
+        width: 100%;
+        max-width: 1940px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .gen-slides-content {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+    .gen-slide {
+        min-width: 100%;
+    }
+    .gen-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .gen-slides-nav {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: var(--space2);
+        z-index: 10;
+    }
+    .gen-slides-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--white);
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .gen-slides-button.active {
+        background-color: var(--red);
+    }
+    @media (orientation: portrait) {
+
+    }
+
+    /* normalize ------------------------------------------------------ */
+    ul{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+    }
+</style>
+
+<!-- thermofisher header hack -------------------------------------------------------->
+<style>
+    .thermofisher-header{ height: 80px; }
+    @media (orientation: portrait) {
+        .thermofisher-header{ height: 40px; }
+    }
+</style>
+<div class="thermofisher-header"></div>
