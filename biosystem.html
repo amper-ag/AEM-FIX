@@ -3,23 +3,9 @@
 [ BIOSYSTEM / AEM DESIGN SYSTEM ]
 
 > module: biosystem.html 
-> version: 1.1
+> version: 1.2
 
 ------------------------------------------------------->
-
-<!-- thermofisher header hack -------------------------------------------------------->
-<style>
-    .thermofisher-header {
-        height: 0;
-    }
-
-    @media (orientation: portrait) {
-        .thermofisher-header {
-            height: 5px;
-        }
-    }
-</style>
-<div class="thermofisher-header"></div>
 
 <style type="text/css">
     body {
@@ -27,26 +13,26 @@
     }
 
     /* mobile images  ------------------------------------------------------ */
-    .image-desktop {
+    .gen-image-desktop {
         display: block;
     }
 
-    .image-mobile {
+    .gen-image-mobile {
         display: none;
     }
 
     @media (orientation: portrait) {
-        .image-desktop {
+        .gen-image-desktop {
             display: none;
         }
 
-        .image-mobile {
+        .gen-image-mobile {
             display: block;
         }
     }
 
     /* grids  ------------------------------------------------------ */
-    .align {
+    .gen-align {
         width: 100%;
         height: 50vh;
         display: flex;
@@ -54,52 +40,52 @@
         align-items: center;
     }
 
-    .align-vertical {
+    .gen-align-center {
+        text-align: center;
+    }
+
+    .gen-align-vertical {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: baseline;
     }
 
-    .align-vertical-center {
+    .gen-align-vertical-center {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .align-center {
-        text-align: center;
-    }
-
-    .grid {
+    .gen-grid {
         display: flex;
         column-gap: 15px
     }
 
-    .grid div {
+    .gen-grid div {
         width: 100%;
     }
 
-    .grid div img {
+    .gen-grid div img {
         display: block;
     }
 
     @media (orientation: portrait) {
-        .grid {
+        .gen-grid {
             display: block;
             column-gap: 15px;
         }
     }
 
     /* boxs ------------------------------------------------------ */
-    .gen-box{
+    .gen-box {
         background-color: #f3f3f3;
         padding: 20px;
     }
-    
+
     /* buttons ------------------------------------------------------ */
-    .gen-button-red {
+    .gen-button {
         transition: all 0.5s ease-in-out;
         display: inline-block;
         cursor: pointer;
@@ -114,16 +100,13 @@
         padding-left: 30px;
         padding-right: 30px;
         border: 0;
-        background-color: #e71316;
-        color: white !important;
     }
 
-    .gen-button-red:hover {
-        background-color: #eee;
-        color: #e71316;
+    .gen-button:hover {
+        opacity: 0.6;
     }
 
-    .gen-button-mini-red {
+    .gen-button-mini {
         transition: all 0.5s ease-in-out;
         display: inline-block;
         cursor: pointer;
@@ -138,40 +121,26 @@
         padding-left: 45px;
         padding-right: 45px;
         border: 0;
+    }
+
+    .gen-button-mini:hover {
+        opacity: 0.6;
+    }
+
+    .gen-button-red {
         background-color: #e71316;
         color: white !important;
     }
 
-    .gen-button-mini-red:hover {
-        background-color: #eee;
-        color: #e71316;
+    .gen-button-blue {
+        background-color: #262262;
+        color: white !important;
     }
 
-    .gen-button-white {
-        transition: all 0.5s ease-in-out;
-        display: inline-block;
-        cursor: pointer;
-        width: auto;
-        text-align: center;
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-size: 1em;
-        font-weight: 400;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 30px;
-        padding-right: 30px;
-        border: 1px solid #d9d9d9;
-        background-color: #ffffff;
-        color: #1e8ae7 !important;
+    .gen-button-violet {
+        background-color: #7474c1;
+        color: white !important;
     }
-
-    .gen-button-white:hover {
-        background-color: #eee;
-        color: #e71316;
-    }
-
-    @media (orientation: portrait) {}
 
     /* lines ------------------------------------------------------ */
     .gen-line-1 {
@@ -195,13 +164,21 @@
     }
 
     /* borders ------------------------------------------------------ */
-    .gen-border-grey {
+    .gen-border {
         border: 1px solid #ddd;
     }
 
     /* titles ------------------------------------------------------ */
     .gen-title-red {
         color: #e71316;
+    }
+
+    .gen-title-blue {
+        color: #262262;
+    }
+
+    .gen-title-violet {
+        color: #7474c1;
     }
 
     /* links ------------------------------------------------------ */
